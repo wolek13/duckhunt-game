@@ -1,0 +1,96 @@
+@import url("normalize.css");
+@import url("responsive-design.css");
+@import url("header.css");
+
+.content {
+  width: 50%;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  margin-top: 2rem;
+  border-radius: 2rem;
+  box-shadow: black 0px 3px 8px 1px;
+  background-color: #E6D97E;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+input[type=number] {
+  width: 70px;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.setupBtn {
+  align-self: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  height: 2rem;
+  width: 6rem;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.reloadBtn {
+  cursor: pointer;
+  height: 2rem;
+  width: 6rem;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.reloadBtn:hover,
+.setupBtn:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 4px 1px;
+}
+
+.background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.duck {
+  position: absolute;
+  cursor: pointer;
+}
+
+.startBtn {
+  position: absolute;
+  width: 10rem;
+  height: 4rem;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+}
+
+.startBtn:hover {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 6px 1px;
+}
+
+.scoreboard {
+  height: 200px;
+  width: 300px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 2rem;
+  position: absolute;
+  font-size: x-large;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}

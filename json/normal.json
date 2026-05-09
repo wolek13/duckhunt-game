@@ -1,0 +1,8 @@
+{
+  "gameLength": 25000,
+  "duckSize": 90,
+  "duckShowTime": 1000,
+  "donaldDuckSpeed": 4000,
+  "superDuckSpeed": 2500,
+  "animationDuration": 6
+}

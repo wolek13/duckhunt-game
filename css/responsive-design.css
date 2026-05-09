@@ -1,0 +1,89 @@
+.nav-links{ display:flex; }
+
+.menu-toggle {
+    display: none;                   /* Hidden by default */
+    background: none;                /* No background */
+    border: none;                    /* No border */
+    font-size: 1.8em;                /* Bigger font for hamburger icon */
+    color: #006400;                
+    cursor: pointer;                 /* Pointer cursor on hover */
+}
+
+.main {
+    padding: min(1rem, 5%);
+}
+
+.aside {
+    padding: min(1rem, 2%);
+}
+
+h1 {
+    font-size: clamp(1.3rem, 4vw, 2.8rem);
+    text-align: center;
+}
+
+h2 {
+    font-size: clamp(1rem, 3vw, 1.6rem);
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+}
+
+img {
+    height: auto;
+}
+
+.article {
+    flex-direction: column;
+}
+
+/* The nav menu responsive styles */
+@media (width <= 940px) {
+    .menu-toggle { display: block; }
+
+    .nav-links {
+        display: none;      /* Added the important to over write another rule  */
+        flex-direction: column;        /* Stack links vertically */
+        position: absolute;            /* Position relative to navbar */
+        top: 60px;                     /* Place below header */
+        right: 0;
+        background-color: #eaf5ea;
+        width: 150px;
+        padding: 10px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;                /* Space between stacked links */
+        padding-left: 1rem;
+    }
+    
+    /* Show menu when 'show' class is added by JS */
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+/* The footer responsive styles */
+@media (width <= 670px) {
+    .footer-triptych { 
+        flex-direction: column;
+    }
+}
+
+/* Responsive style for the main and aside containers.*/
+@media (width <= 600px) {
+    .wrap { 
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .wrap .main { order: 1; }
+    .wrap .aside { order: 2; }
+}
+
+@media (width <= 860px) {
+    .figure.right { 
+        float: unset;
+    }
+}

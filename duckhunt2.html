@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duckhunt</title>
+  <link rel="stylesheet" href="css/duckhunt2.css">
+  <link rel="icon" href="img/duck.svg">
+</head>
+<body>
+  <div id="content" class="content">
+    <h1>Choose the game difficulty wisely!</h1>
+    <div class="difficultyChoices">
+      <label><input type="radio" name="difficulty" value="easy" checked>Easy</label>
+      <label><input type="radio" name="difficulty" value="normal">Normal</label>
+      <label><input type="radio" name="difficulty" value="hard">Hard</label>
+    </div>
+    <h1>Choose your background</h1>
+    <div class="bgChoices">
+      <label><input type="radio" name="background" value="0" checked>Random background</label>
+      <label><input type="radio" name="background" value="1">Space</label>
+      <label><input type="radio" name="background" value="2">Waterfall</label>
+      <label><input type="radio" name="background" value="3">Beach</label>
+    </div>
+    <button id="setupBtn" class="setupBtn">Continue</button>
+  </div> 
+
+  <script type="module" src="js/duckhunt2.js"></script>
+</body>
+</html>

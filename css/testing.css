@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-image: url("../img/project-background1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100dvh;
+  width: 100dvw;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.crosshair {
+  width: 64px;
+  height: 64px;
+  display: block;
+}
+
+.super-duck {
+  display: none;
+  width: 200px;
+  height: 200px;
+}
+
+.donald-duck {
+  display: none;
+  width: 200px;
+  height: 200px;
+}
+
+.duck {
+  width: 200px;
+  height: 200px;
+  display: none;
+}

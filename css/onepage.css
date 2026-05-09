@@ -1,0 +1,155 @@
+@import url("normalize.css");
+@import url("header1.css");
+@import url("footer1.css");
+
+/* Variables for onepage website. */
+:root {
+  /* Variables for the color theme. */
+  --color-theme1: #FFFFF0;
+  --color-theme2: #b83939;
+  --color-theme3: #191970;
+  --color-text-light: #F8F8FF;
+  --color-text-dark: #404040;
+
+  /* Other variables*/
+  --soft-edge: 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: arial, sans-serif;
+}
+
+h2 {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+}
+
+p {
+  font-size: 1rem;
+}
+.row {
+  display: flex;
+  gap: 2rem;
+  padding: min(1rem, 2%);
+}
+
+.row.theme1 {
+  background-color: var(--color-theme1);
+}
+
+.row.theme2 {
+  background-color: var(--color-theme2);
+}
+
+.row.cols1 .col {
+  flex: 1 1 100%;
+}
+
+.row.cols2 .col {
+  flex: 1 1 calc(50% - 1rem);
+}
+
+.row.cols3 .col {
+  flex: 1 1 33.333%;
+}
+
+.theme1 h2,
+.theme1 p {
+  color: var(--color-text-dark);
+}
+
+.theme2 h2,
+.theme2 p,
+.theme2 figcaption {
+  color: var(--color-text-light);
+}
+
+p {
+  padding: min(1rem, 4%);
+  padding-top: 0;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+}
+
+.col.theme3 {
+  border-radius: var(--soft-edge);
+  box-shadow: var(--color-theme3) 0px 3px 8px 1px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.background {
+  min-height: 25rem;
+  background-image: url("../img/norway-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--soft-edge);
+  box-shadow: var(--color-theme3) 0px 3px 8px 1px;
+}
+
+.content {
+  text-align: center;
+  flex-direction: column;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 18 / 9;
+  object-fit: cover;
+  max-height: 15rem;
+  border-radius: var(--soft-edge);
+}
+
+.row.cols3 figure img {
+  max-height: 12rem;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.scroll {
+  overflow-x: auto;
+}
+
+.scroll .col {
+  min-width: 45%;
+}
+
+.svg-img {
+  fill: var(--color-theme1);
+  height: 5rem;
+  width: 6rem;
+}
+
+.break .col {
+  height: fit-content;
+  gap: 2rem;
+}
+
+@media (width <= 900px) {
+  .row.cols2.theme2,
+  .row.cols2.wrap { 
+    flex-direction: column; 
+    gap: 0;
+  }
+}
+
+@media (width <= 970px) {
+  .row.cols3 { gap: 0; }
+  .row.cols3 {flex-wrap: wrap;}
+  .row.cols3 .col.one { flex: 1 1 100%; }
+
+}
+
+@media (width <= 700px) {
+  .row.cols3 .col.two { flex: 1 1 100%; }
+  .row.scroll .col { min-width: 85%; }
+}

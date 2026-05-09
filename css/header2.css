@@ -1,0 +1,158 @@
+/* Navbar style*/
+
+/* Variables for onepage website. */
+:root {
+	/* Variables for the color theme. */
+	--color-theme1: #FFFFFF;
+	--color-theme2: #FFD800;
+	--color-theme3: #FF6D00;
+	--color-text-light: black;
+	--color-text-dark: black;
+
+	/* Other variables*/
+	--soft-edge: 1rem;
+}
+
+.siteheader {
+	width: 100%;
+	display: flex;
+	background-color: var(--color-theme1);
+	border-bottom: 3px solid var(--color-theme3);
+}
+
+.siteheader :first-child {
+	margin-right: auto;
+}
+
+.siteheader span {
+	font-weight: bold; 
+	color: var(--color-theme3);
+	font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+.site-icon {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding-left: 1rem;
+	min-height: 100%;
+	text-decoration: none;
+}
+
+.siteheader img {
+	height: 4rem;
+	width: 4rem;
+}
+
+.nav-links {
+	width: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.nav-links a {
+	height: 100%;
+	padding: 0 2rem;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	color: var(--color-theme3);
+	font-weight: bold;
+	border-radius: var(--soft-edge);
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.siteheader .nav-links li {
+	height: 2.5rem;
+}
+
+.siteheader .nav-links a:hover {
+	color: var(--color-theme1);
+	background-color: var(--color-theme3);
+}
+
+
+.sidebar {
+	position: fixed;
+	margin: 0;
+	padding: 0;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 100%;
+	z-index: 999;
+	background-color: var(--color-theme1);
+	border-radius: var(--soft-edge);
+	box-shadow: var(--color-theme3) 0px 3px 8px 1px;
+	display: none;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+.list {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	padding-top: 1rem;
+}
+
+.list a {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	color: var(--color-theme3);
+	font-weight: bold;
+	font-size: 1.2rem;
+	border-radius: var(--soft-edge);
+	transition: background-color 0.3s, color 0.3s;
+	position: relative;
+	height: 2.5rem;
+	text-decoration: none;
+	padding-left: 2rem;
+}
+
+.siteheader .sidebar li {
+	height: 2.5rem;
+	width: 90%;
+	list-style: none;
+}
+
+.siteheader .sidebar a:hover {
+	color: var(--color-theme1);
+	background-color: var(--color-theme3);
+}
+
+.show-sidebar {
+	display: none;
+	background: none;
+	border: none;
+	font-size: 2rem;
+	color: var(--color-theme3);
+	cursor: pointer;
+	padding-right: 1rem;
+}
+
+.close-sidebar {
+	display: none;
+	background: none;
+	border: none;
+	font-size: 1.7rem;
+	color: var(--color-theme3);
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 1rem 1rem;
+}
+
+.navbar {
+	display: flex;
+}
+
+@media (width <= 990px) {
+    .show-sidebar { display: block; }
+    .nav-links { display: none; }
+}

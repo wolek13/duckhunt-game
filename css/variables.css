@@ -1,0 +1,12 @@
+/* Variables for onepage website. */
+:root {
+  /* Variables for the color theme. */
+  --color-theme1: #FFFFF0;
+  --color-theme2: #b83939;
+  --color-theme3: #191970;
+  --color-text-light: #F8F8FF;
+  --color-text-dark: #404040;
+
+  /* Other variables*/
+  --soft-edge: 1rem;
+}

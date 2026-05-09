@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>One-page with CSS</title>
+  <link rel="stylesheet" href="css/onepage.css">
+  <link rel="icon" href="img/norway-flag.svg">
+</head>
+<body>
+  <header class="siteheader">
+    <div>
+      <a class="site-icon" href="/me.html" target="_blank" rel="noopener noreferrer">
+        <img src="img/norway-flag.svg" alt="Logotyp">
+        <span>Besök Norge</span>
+      </a>
+    </div>
+
+    <nav class="navbar">
+      <div class="sidebar" id="sidebar">
+        <ul id="sidelink" class="list">
+          <li><a href="#to-do">Aktiviteter</a></li>
+          <li><a href="#cities">Städer</a></li>
+          <li><a href="#skitrip">Skidresa</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="/me.html">Min hemsida</a></li>
+        </ul>
+        <button class="close-sidebar" id="close-sidebar">&#x2715;</button>
+      </div> 
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#to-do">Aktiviteter</a></li>
+        <li><a href="#cities">Städer</a></li>
+        <li><a href="#skitrip">Skidresa</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="/me.html">Min hemsida</a></li>
+      </ul>
+      <button class="show-sidebar" id="show-sidebar">&#9776;</button>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <section class="row cols1 theme1">
+      <div class="col background">
+      </div>
+    </section>
+    
+    <section class="row cols2 theme2">
+      <div class="col">
+        <div class="content">
+          <h2>Varför resa till Norge?</h2>
+          <p>Norge är landet där modern design möter storslagen natur. Här väntar dramatiska landskap, pittoreska städer och ett varmt välkomnande folk. 
+            Oavsett om du vill vandra bland fjälltoppar, segla genom fjordar eller utforska stadspulsen i Oslo och Bergen finns här något för alla. 
+            Reser du längre norrut får du chansen att uppleva norrskenets dans över himlen på vintern och midnattssolens magi på sommaren. 
+            En resa hit är inte bara en semester, 
+            det är ett äventyr som stannar kvar i minnet för alltid.
+          </p>
+        </div>
+      </div>
+    
+      <div class="col">
+        <div class="content">
+          <figure class="img">
+            <img src="img/Norden-lights.jpg" alt="Bild på norrsken.">
+            <figcaption>Norrsken i norra delen av Norge.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="to-do" class="row cols3 theme1">
+      <div class="col theme3 one">
+        <div class="content">
+          <h2>Fjällvandring</h2>
+          <p>Upplev Norges storslagna natur till fots. Vandra längs branta berg, 
+            gröna dalar och kända leder som Trolltunga och Preikestolen. 
+            Oavsett om du är nybörjare eller erfaren vandrare finns det leder för alla nivåer.
+          </p>
+          <figure class="image">
+            <img src="img/norway-nature.jpg" alt="Bild på fjällen.">
+          </figure>
+        </div>
+      </div>      
+      <div class="col theme3 two">
+        <div class="content">
+          <h2>Norrsken</h2>
+          <p>I Nordnorge kan du se himlen dansa i gröna och lila färger. 
+            Norrskenet är en magisk naturupplevelse du sent kommer glömma. 
+            Den bästa tiden att se fenomenet är under vinterns klara nätter.
+          </p>
+          <figure class="image">
+            <img src="img/norden-lights2.jpg" alt="Bild på Nordsken.">
+          </figure>
+        </div>
+      </div>
+      <div class="col theme3 three">
+        <div class="content">
+          <h2>Fiske</h2>
+          <p>Norge är ett paradis för fiskeälskare. 
+            Här kan du pröva lyckan i klara fjällsjöar, längs fjordarna eller ute på öppet hav. 
+            Chansen är stor att du får napp på allt från lax till torsk.
+          </p>
+          <figure class="image">
+            <img src="img/fisherman.jpg" alt="Bild på en fiskare.">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="cities" class="row cols1 theme2 break">
+      <div class="col">        
+        <h2>Intressanta städer</h2>
+        <img src="img/viking-boat.png" alt="Bild på vikingbåt." class="svg-img">
+      </div>
+    </section>
+
+    <section class="row cols2 theme1 wrap">
+      <div class="col theme3">
+        <div class="content">
+          <h2>Oslo</h2>
+          <p>Oslo är Norges huvudstad och en perfekt blandning av storstad och natur. Här hittar du moderna byggnader som Operahuset och Munchmuseet, men också historiska platser som Akershus fästning. 
+            Staden har ett rikt kulturliv med teatrar, konserter och museer i världsklass. Runt hörnet väntar Oslofjorden med fina möjligheter till båtturer och bad. 
+            För den som gillar shopping finns både exklusiva butiker och charmiga smågator. På vintern kan man snabbt ta sig till skidspår i Nordmarka. 
+            Oslo är en stad som passar både kulturälskare och naturälskare.
+          </p>
+          <figure class="image">
+            <img src="img/Oslo.jpg" alt="Bild på Oslo.">
+          </figure>
+        </div>
+      </div>
+    
+      <div class="col theme3">
+        <div class="content">
+          <h2>Lofoten</h2>
+          <p>
+            Lofoten är en ögrupp i Nordnorge känd för sina dramatiska fjäll och vackra fjordar. 
+            Här kan du se pittoreska fiskebyar med röda sjöbodar längs havet. Landskapet är perfekt för vandring, klättring och kajakpaddling. 
+            Under vintern har du chans att uppleva norrskenet, och under sommaren lyser midnattssolen hela natten. 
+            Fiske är en viktig del av kulturen, och du kan smaka på färsk torsk och andra delikatesser. 
+            Fotografer älskar Lofoten för dess magiska ljus och kontraster. 
+            Det är en plats där naturen alltid står i centrum.
+          </p>
+          <figure class="image">
+            <img src="img/Lofoten.jpg" alt="Bild på Lofoten.">
+          </figure>
+        </div>
+      </div>
+    
+      <div class="col theme3">
+        <div class="content">
+          <h2>Bergen</h2>
+          <p>
+            Bergen är känd som “porten till fjordarna” och är Norges näst största stad. Den färgglada bryggan Bryggen är ett UNESCO-världsarv och en av de mest fotograferade platserna i landet. 
+            Bergen omges av sju berg och bjuder på fantastiska vandringsmöjligheter. Du kan också ta Fløibanen upp till Fløyen och njuta av utsikten över hela staden. Klimatet är regnigt, 
+            men det bidrar till stadens gröna och frodiga natur. 
+            Bergen är också en stad med ett rikt musik- och kulturliv. Här möts historia och modern livsstil på ett charmigt sätt.
+          </p>
+          <figure class="image">
+            <img src="img/Bergen.jpg" alt="Bild på Bergen.">
+          </figure>
+        </div>
+      </div>
+    
+      <div class="col theme3">
+        <div class="content">
+          <h2>Tromsø</h2>
+          <P>
+            Tromsø ligger norr om polcirkeln och är känd som “porten till Arktis”. Staden är en av de bästa platserna i världen för att se norrsken. 
+            Här finns också midnattssolen under sommarmånaderna, vilket gör att dagarna känns oändliga. Tromsø är en livlig studentstad med många restauranger och festivaler året runt. 
+            Du kan uppleva samisk kultur, hundsläde och arktiska expeditioner. 
+            Staden har också imponerande byggnader som Ishavskatedralen. Tromsø är en unik plats där stadsliv möter vild och orörd natur.
+          </P>
+          <figure class="image">
+            <img src="img/Tromso.jpg" alt="Bild på Tromsø.">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="skitrip" class="row cols1 theme2 break">
+      <div class="col">
+        <h2>Skidresor</h2>
+        <img src="img/skiing.png" alt="Bild på vikingbåt." class="svg-img">
+      </div>
+    </section>
+
+    <section class="row cols2 theme1 scroll">
+      <div class="col theme3">
+        <div class="content">
+          <h2>Trysil</h2>
+          <p>
+            Trysil är Norges största skidort och passar både nybörjare och erfarna skidåkare. 
+            Här finns över 70 nedfarter och ett stort system av liftar. Området erbjuder även barnvänliga backar och lekparker för de yngsta. 
+            För den som gillar längdskidor finns många preparerade spår. 
+            Trysil är en komplett skidort med både fartfyllda backar och mysiga stugområden.
+          </p>
+        </div>
+      </div>
+    
+      <div class="col theme3">
+        <div class="content">
+          <h2>Hemsedal</h2>
+          <p>
+            Hemsedal kallas ofta för “Skandinaviens Alper” tack vare sina höga fjäll och långa backar. 
+            Orten är populär bland unga skidåkare och snowboardåkare tack vare sina snowparks. Här finns backar för alla nivåer, från gröna till svarta. 
+            På kvällarna bjuder Hemsedal på ett livligt afterski-liv. 
+            Kombinationen av vacker natur och bra skidåkning gör Hemsedal till en favorit.
+          </p>
+        </div>
+      </div>
+    
+      <div class="col theme3">
+        <div class="content">
+          <h2>Geilo</h2>
+          <p>
+            Geilo är en familjevänlig skidort som ligger mellan Oslo och Bergen. Här finns både alpina nedfarter och fantastiska längdskidspår. 
+            Orten är känd för sin lugna atmosfär och vackra fjällmiljö. För barn finns flera aktivitetsområden och lättåkta backar. 
+            Geilo passar perfekt för den som vill kombinera skidåkning med en avslappnad semester.
+          </p>
+        </div>
+      </div>
+    
+      <div class="col theme3">
+        <div class="content">
+          <h2>Hafjell</h2>
+          <p>
+            Hafjell ligger nära Lillehammer och är en av Norges mest populära skidorter. 
+            Orten blev känd efter OS i Lillehammer 1994 och erbjuder idag moderna anläggningar. Här finns varierande backar som passar både nybörjare och proffs. 
+            Hafjell är också känt för sina barnområden och fina möjligheter till snowboardåkning. 
+            Det är en skidort som erbjuder både historia och toppklassig skidåkning.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="sitefooter">
+    <div class="footer-triptych">
+      <div class="footer-column">
+        <h3>Nödsituationer</h3>
+        <ul>
+          <li>Polisen: 112</li>
+          <li>Ambulans: 113</li>
+          <li>Brandkåren: 110</li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Turism</h3>
+        <ul>
+          <li><a href="https://www.visitnorway.no/" target="_blank" rel="noopener noreferrer">Visit Norway</a></li>
+          <li><a href="https://www.vy.no/" target="_blank" rel="noopener noreferrer">Kollektivtrafik</a></li>
+          <li><a href="https://www.hurtigruten.com/nb-no" target="_blank" rel="noopener noreferrer">Kryssning</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3 id="kontakt">Kontakt</h3>
+        <ul>
+          <li>Mejl:</li>
+          <li>turism@gmail.no</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; Välkommen till Norge</p>
+    </div>
+  </footer>
+
+  <script src="js/onepage.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+@import url("normalize.css");
+
+html, body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: auto;
+  background-image: url("../img/grey-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100dvh;
+  width: 100dvw;
+  font-family: "Papyrus", "Copperplate", fantasy;
+}
+
+.content {
+  width: 50%;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  border-radius: 2rem;
+  box-shadow: black 0px 3px 8px 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
+}
+
+.difficultyChoices {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+}
+
+label {
+  flex: 1;
+  text-align: center;
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
+}
+
+input[type=radio i] {
+  scale: 1.1;
+  margin-right: 1rem;
+}
+
+.setupBtn {
+  align-self: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  width: 6rem;
+}
+
+.setupBtn:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 8px 1px;
+}
+
+.bgChoices {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bgChoices label {
+  flex: 1 1 calc(50% - 1rem);
+  margin-bottom: 1rem;
+}
+
+.background {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100dvh;
+  width: 100dvw;
+}
+
+.startBtn {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: large;
+  align-self: center;
+}
+
+.startBtn:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 8px 1px;
+}
+
+.pregameContent {
+  display: flex;
+  width: fit-content;
+  position: relative;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.gameName {
+  display: flex;
+  width: 100%;
+}
+
+.letter {
+  height: 4rem;
+  width: 4rem;
+  animation-name: softScale;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 2;
+}
+
+@keyframes softScale {
+  0% {transform:scale(1)}
+  50% {transform: scale(1.5)}
+  100% {transform: scale(1);}
+}
+.letter:nth-of-type(1) {animation-delay: 0.1s;}
+.letter:nth-of-type(2) {animation-delay: 0.2s;}
+.letter:nth-of-type(3) {animation-delay: 0.3s;}
+.letter:nth-of-type(4) {animation-delay: 0.4s;}
+.letter:nth-of-type(5) {animation-delay: 0.5s;}
+.letter:nth-of-type(6) {animation-delay: 0.6s;}
+.letter:nth-of-type(7) {animation-delay: 0.7s;}
+.letter:nth-of-type(8) {animation-delay: 0.8s;}
+
+@keyframes moveDuck {
+  to {transform: translateX(-120vw);}
+}
+
+.duckWrapper {
+  transform: translateX(100vw);
+  position: absolute;
+  animation-name: moveDuck;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: forwards; 
+}
+
+.duckImg,
+.superDuckImg,
+.donaldDuckImg{
+  position: absolute;
+}
+
+@keyframes duckFall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  50% {opacity: 0.5;}
+  100% { transform: translateY(70vh) rotate(720deg); opacity: 0; display: none; }
+}
+
+.falling {
+  animation: duckFall 2s linear forwards;
+}
+
+@keyframes rotating {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(180deg); display: none; }
+}
+
+.implode {
+  transition: width 1s, height 1s;
+  animation: rotating 1s;
+}
+
+.timerDiv {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.scoreboard {
+  width: 40%;
+  padding: 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2rem;
+  box-shadow: black 0px 3px 8px 1px;
+  background-color: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  transition: all 0.3s ease;
+}
+
+.scoreTable {
+  justify-content: center;
+  align-items: center;
+  border-collapse: collapse;
+}
+
+.scoreboard h2 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.scoreTable td {
+  text-align: center;
+}
+
+.scoreboard th {
+  width: 50%;
+  padding-bottom: 1rem;
+  font-weight: bold;
+}
+
+.new {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.scoreboard .tableBody tr {
+  border-bottom: 2px dotted black;
+}
+
+.restartBtn {
+  width: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  align-self: center;
+  margin-top: 2rem;
+}
+
+.restartBtn:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 8px 1px;
+}
+
+button {
+  font-family: "Papyrus", "Copperplate", fantasy;
+  border-radius: 8px;
+}
+
+/*
+For making the game suitable for tablets.
+Ease out makes the ducks slightly faster from the beginning.
+And making the ducks slightly smaller.
+*/
+@media (width <= 1120px) {
+
+  .content { width: 80%; }
+  .scoreboard{ width: 60%; }
+
+  body .duckWrapper {
+    animation-timing-function: ease-out;
+  }
+  body .duck { scale: 0.8; }
+}
+
+@media (width <= 800px) {
+  input[type=radio i] { scale: 1; margin-right: 4px; }
+  .restartBtn { width: 60%; transition: all 0.3s ease; }
+}
+
+/*
+Settings for playing on the phone.
+Ease makes the ducks even faster on the screen.
+and the ducks are smaller
+*/
+@media (width <= 440px) {
+  .bgChoices { flex-direction: column; }
+  .difficultyChoices { flex-direction: column; }
+
+  .scoreboard{ width: 90%; transition: all 0.3s ease; }
+
+  body .duckWrapper {
+    animation-timing-function: ease;
+  }
+  body .duck { scale: 0.6; }
+
+  body .letter {
+    height: 2rem;
+    width: 2rem;
+  }
+}

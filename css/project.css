@@ -1,0 +1,253 @@
+@import url("normalize.css");
+@import url("header2.css");
+@import url("footer2.css");
+
+/* Variables for onepage website. */
+:root {
+  /* Variables for the color theme. */
+  --color-theme1: #FFFFFF;
+  --color-theme2: #FFD800;
+  --color-theme3: #FF6D00;
+  --color-text-light: black;
+  --color-text-dark: black;
+
+  /* Other variables*/
+  --soft-edge: 1rem;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: arial, sans-serif;
+}
+
+h2 {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-family: "Papyrus", "Copperplate", fantasy;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.introText {
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+
+.row {
+  display: flex;
+  gap: 2rem;
+  padding: min(1rem, 2%);
+}
+
+.row.theme1 {
+  background-color: var(--color-theme1);
+}
+
+.row.theme2 {
+  background-color: var(--color-theme2);
+}
+
+.row.cols1 .col {
+  flex: 1 1 100%;
+}
+
+.row.cols2 .col {
+  flex: 1 1 calc(50% - 1rem);
+}
+
+.row.cols3 .col {
+  flex: 1 1 33.333%;
+}
+
+.theme1 h2,
+.theme1 p {
+  color: var(--color-text-dark);
+}
+
+.theme2 h2,
+.theme2 p,
+.theme2 figcaption {
+  color: var(--color-text-light);
+}
+
+p {
+  padding: min(1rem, 4%);
+  padding-top: 0;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+}
+
+.col.theme3 {
+  border-radius: var(--soft-edge);
+  box-shadow: var(--color-theme2) 0px 3px 8px 1px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.background {
+  min-height: 25rem;
+  background-image: url("../img/duck-bg.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--soft-edge);
+  box-shadow: var(--color-theme2) 0px 3px 8px 1px;
+  flex-direction: column;
+  gap: 14rem;
+}
+
+.gameBtn {
+  background: rgba(255, 255, 255, 0.4);
+  height: 3.5rem;
+  width: 14rem;
+  color: black;
+  border-radius: 4px;
+  font-family: "Papyrus", "Copperplate", fantasy;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border: 2px solid black;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.gameBtn:hover {
+  background-color: #FFFFFF;
+}
+
+.content {
+  text-align: center;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 18 / 9;
+  object-fit: cover;
+  border-radius: var(--soft-edge);
+}
+
+.device.one img {
+  aspect-ratio: auto;
+  object-fit:fill;
+  height: 20rem;
+}
+
+.device.two img {
+  aspect-ratio: auto;
+  object-fit: scale-down;
+  height: 20rem;
+}
+
+.row.cols3 figure img {
+  max-height: 12rem;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.scroll {
+  overflow-x: auto;
+}
+
+.scroll .col {
+  min-width: 45%;
+}
+
+.scroll .content p,
+.scroll .content h2 {
+  padding: 0 1rem;
+  margin: 0.5rem 0;
+}
+
+.scroll .col .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1rem;
+  gap: 0.5rem;
+}
+
+.scroll .scroll-img {
+  width: 80%;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.scroll .scroll-vid {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--soft-edge);
+  display: block;
+  object-fit: cover;
+}
+
+.row.cols1 video {
+  display: block;
+  width: 80%;
+  max-width: 90%;
+  margin: 0 auto;
+  height: auto;
+  border-radius: var(--soft-edge);
+  box-shadow: var(--color-theme2) 0px 3px 8px 1px;
+}
+
+.effects-headline {
+  background-color: var(--color-theme1);
+  width: 100%;
+  text-align: center;
+  padding-top: 1rem;
+  margin-bottom: 0;
+}
+
+.wrapper .content audio {
+  width: 100%;
+  max-width: 350px;
+}
+
+.audio-div {
+  width: 80%;
+  height: fit-content;
+}
+
+@media (width <= 1200px) {
+  .row.cols2.theme2 { 
+    flex-direction: column; 
+    gap: 0;
+  }
+}
+
+@media (width <= 900px) {
+  .row.cols2.wrap { 
+    flex-direction: column; 
+    gap: 0;
+  }
+}
+
+@media (width <= 970px) {
+  .row.cols3 { gap: 1rem; }
+  .row.cols3 {flex-wrap: wrap;}
+  .row.cols3 .col.one { flex: 1 1 100%; }
+}
+
+@media (width <= 700px) {
+  .row.cols3 .col.two { flex: 1 1 100%; }
+  .row.scroll .col { min-width: 80%; }
+  .row.cols1 video {
+    width: 90%;
+  }
+}

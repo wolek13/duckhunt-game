@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duckhunt</title>
+  <link rel="stylesheet" href="css/duckhunt.css">
+</head>
+<body>
+  <header class="siteheader">
+    <div>
+      <a href="me.html">
+        <img src="img/leaf.png" alt="Logotyp">
+        <span>Kursen webtec</span>
+      </a>
+    </div>
+  
+    <nav>
+      <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="me.html">Me</a></li>
+        <li><a href="report.html">Redovisa</a></li>
+        <li><a href="about.html">Om</a></li>
+        <li><a href="onepage.html">Onepage</a></li>
+        <li><a href="dom.html">Dom</a></li>
+        <li><a href="fetch.html">Fetch</a></li>
+        <li><a href="duckhunt.html">Duckhunt</a></li>
+        <li><a href="project.html">Project</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="content" class="content">
+    <h1>Settings</h1>
+    <label for="chooseBg">Choose your background:</label>
+    <input type="number" id="chooseBg" min="0" max="5" value="0">
+    <label for="gameLength">Choose the length of the game:</label>
+    <input type="number" id="gameLength" min="10" max="30" step="10" value="10">
+    <label for="chooseSpeed">Choose the speed of the ducks movment(speed in seconds):</label>
+    <input type="number" id="chooseSpeed" min="1" max="3" value="3">  
+    <button id="setupBtn" class="setupBtn">Continue</button>
+  </div> 
+  <script type="module" src="js/responsive-design.js"></script>
+  <script type="module" src="js/duckhunt.js"></script>
+</body>
+</html>
